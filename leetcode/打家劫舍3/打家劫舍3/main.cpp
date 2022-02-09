@@ -22,7 +22,6 @@ public:
 	Tree()
 		:root(nullptr)
 	{
-
 	}
 	TreeNode* init(vector<int>& nums, int n = 0)
 	{
@@ -54,6 +53,7 @@ int rob3(TreeNode* root) {
 	if (root->right != nullptr)
 		rootval += rob3(root->right->left) + rob3(root->right->right);
 	int childval = rob3(root->left) + rob3(root->right);
+	//记录当前节点后能偷到的最大值，防止父节点重复计算
 	map[root] = max(rootval, childval);
 	return max(rootval, childval);
 }
