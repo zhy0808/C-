@@ -12,7 +12,7 @@ Date::Date(int year, int month, int day)     //È«È±Ê¡µÄ¹¹Ôìº¯Êı£¬È±Ê¡²ÎÊıÔÚÉùÃ÷´
 int Date::getMonthDay(int year, int month)                          //·µ»ØÄ³ÄêÄ³ÔÂ¶ÔÓ¦¶àÉÙÌì
 {
 	int arr[12] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-	if (month == 2 && ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0))//ÈòÄê2ÔÂ28Ìì
+	if (month == 2 && ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0))//ÈòÄê2ÔÂ29Ìì
 	{
 		return 29;
 	}
